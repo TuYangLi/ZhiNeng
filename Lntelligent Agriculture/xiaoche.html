@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>Bootstrap 101 Template</title>
+
+		<!-- Bootstrap -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+		<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+		<!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.xiaoche_title {
+				background: cornflowerblue;
+			}
+			
+			.xiaoche_icon {
+				color: #FFFFFF;
+			}
+			
+			.mui-title {
+				font-family: "微软雅黑";
+				font-size: 20px;
+				color: white;
+			}
+			
+			.xiaoche_main {
+				margin-top: 15px;
+			}
+			
+			.xiaoche_speed {
+				width: 80%;
+				height: 25%;
+				/*background: #FFFFFF;*/
+				margin-top: 10px;
+				background: seashell;
+			}
+			
+			#div {
+				width: 0px;
+				height: 0px;
+				background: red;
+				position: fixed;
+				top: 58%;
+				left: 50%;
+			}
+			/*移除底部或顶部三角,需要在删除此代码*/
+			
+			.mui-popover .mui-popover-arrow:after {
+				width: 0px;
+			}
+			
+			.title {
+				font-size: 22px;
+				margin-top: 10px;
+				text-align: center;
+			}
+			
+			.hr {
+				background: gainsboro;
+				width: 85%;
+				height: 2px;
+				margin-top: 15px;
+				margin-left: 20px;
+			}
+			
+			.select {
+				width: 60%;
+				margin-left: 30px;
+				margin-top: 15px;
+			}
+			
+			.mui-btn {
+				background: gainsboro;
+				margin-top: 20px;
+			}
+			
+			.small {
+				text-align: center;
+			}
+			
+			.money {
+				float: left;
+				width: 100%;
+			}
+			
+			.money_xiaoche {
+				width: 70%;
+				margin-top: 5px;
+				font-size: 20px;
+				color: orangered;
+				text-align: center;
+			}
+			
+			.btn_2 {
+				background: cornflowerblue;
+				margin-left: 5px;
+				margin-top: 2px;
+			}
+			
+			.shurukuang {
+				margin-top: 10px;
+				float: left;
+				width: 100%;
+			}
+			
+			.tijiao {
+				float: left;
+				width: 60%;
+				margin-left: 30px;
+			}
+			
+			.tijiao_btn {
+				float: left;
+				width: 40px;
+			}
+			
+			.btn_3 {
+				background: cornflowerblue;
+				margin-left: 5px;
+				margin-top: 5px;
+			}
+			
+			.action_btn2 {
+				width: 75px;
+				height: 30px;
+				margin-bottom: 10px;
+				background: cornflowerblue;
+				margin-left: 35%;
+				border-radius: 5px;
+			}
+			
+			.xuanze {
+				width: 100%;
+				height: 30px;
+			}
+			
+			.action_xuanze {
+				text-align: center;
+				/*margin-left: 50px;*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- 主界面菜单同时移动 -->
+		<!-- 侧滑导航根容器 -->
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 菜单容器 -->
+				<aside class="mui-off-canvas-left" id="offCanvasSide">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<!-- 菜单具体展示内容 -->
+
+						</div>
+					</div>
+				</aside>
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav xiaoche_title">
+					<a  class="mui-icon mui-action-menu mui-icon-back mui-pull-left xiaoche_icon" id="xiaoche_main"></a>
+					<h1 class="mui-title">小车</h1>
+				</header>
+
+				<!-- 主页面内容容器 -->
+				<div class="mui-content mui-scroll-wrapper xiaoche_main">
+					<div class="mui-scroll">
+						<!-- 主界面具体展示内容 -->
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								<a id="speed" class="mui-navigate-right">
+									小车当前速度
+								</a>
+							</li>
+
+							<li class="mui-table-view-cell">
+								<a id="weizhi" class="mui-navigate-right">
+									小车当前位置
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a id="money" class="mui-navigate-right">
+									小车当前余额
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a id="action" class="mui-navigate-right">
+									设置小车动作
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a id="jilu" class="mui-navigate-right tiaozhuan">
+									小车记录
+								</a>
+							</li>
+						</ul>
+
+					</div>
+
+				</div>
+
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+		<!--小车速度点击代码块-->
+		<div id="div"></div>
+		<div id="popover" class="mui-popover xiaoche_speed">
+			<div class="mui-popover-arrow"></div>
+			<div class="title">
+				小车速度
+			</div>
+			<div class="hr"></div>
+			<div class="">
+				<select class="select">
+
+					<option>一号小车</option>
+
+					<option>二号小车</option>
+
+					<option>三号小车</option>
+
+					<option>四号小车</option>
+
+				</select>
+				<button type="button" class="mui-btn">
+					查询
+				</button>
+			</div>
+			<p class="small">
+				暂无速度
+			</p>
+		</div>
+
+		<!--小车位置点击代码块-->
+		<div id="div"></div>
+		<div id="popover_2" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="title">
+				小车位置
+			</div>
+			<div class="hr"></div>
+			<div class="">
+				<select class="select">
+
+					<option>一号小车</option>
+
+					<option>二号小车</option>
+
+					<option>三号小车</option>
+
+					<option>四号小车</option>
+
+				</select>
+				<button type="button" class="mui-btn">
+					查询
+				</button>
+			</div>
+			<p class="small">
+				一号小车位置
+			</p>
+		</div>
+
+		<!--小车余额点击代码块-->
+		<div id="div"></div>
+		<div id="popover_3" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="title">
+				当前余额
+			</div>
+			<div class="hr"></div>
+			<div class="">
+				<select class="select">
+
+					<option>一号小车</option>
+
+					<option>二号小车</option>
+
+					<option>三号小车</option>
+
+					<option>四号小车</option>
+
+				</select>
+				<button type="button" class="mui-btn">
+					查询
+				</button>
+			</div>
+			<div class="money">
+				<div class="mui-input-row tijiao">
+					<p class="money_xiaoche">100元</p>
+				</div>
+				<div class="tijiao_btn">
+					<button type="button" class="mui-btn btn_2">
+					充值
+				</button>
+				</div>
+			</div>
+			<div class="shurukuang">
+				<div class="mui-input-row tijiao">
+					<textarea id="textarea" rows="1"></textarea>
+				</div>
+				<div class="tijiao_btn">
+					<button type="button" class="mui-btn btn_3">
+					提交
+				</button>
+				</div>
+			</div>
+
+		</div>
+
+		<!--小车动作点击代码块-->
+		<div id="div"></div>
+		<div id="popover_4" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="title">
+				设置小车动作
+			</div>
+			<div class="hr"></div>
+			<div class="">
+				<select class="select">
+
+					<option>一号小车</option>
+
+					<option>二号小车</option>
+
+					<option>三号小车</option>
+
+					<option>四号小车</option>
+
+				</select>
+				<button type="button" class="mui-btn">
+					查询
+				</button>
+			</div>
+			<div class="xuanze">
+				<form class="action_xuanze">
+
+					<input type="radio" checked="checked" name="Sex" value="male" /> 启动
+
+					<input type="radio" name="Sex" value="female" /> 停止
+				</form>
+			</div>
+			<button type="button" class="mui-btn action_btn2">
+					设置
+				</button>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+
+			document.getElementById("speed").addEventListener("tap", function() {
+				//调用隐藏/显示弹出层
+				mui("#popover").popover('toggle', document.getElementById("div"));
+			})
+			document.getElementById("weizhi").addEventListener("tap", function() {
+				//调用隐藏/显示弹出层
+				mui("#popover_2").popover('toggle', document.getElementById("div"));
+			})
+			document.getElementById("money").addEventListener("tap", function() {
+				//调用隐藏/显示弹出层
+				mui("#popover_3").popover('toggle', document.getElementById("div"));
+			})
+			document.getElementById("action").addEventListener("tap", function() {
+				//调用隐藏/显示弹出层
+				mui("#popover_4").popover('toggle', document.getElementById("div"));
+			})
+						document.getElementById('jilu').addEventListener('tap', function() {
+					mui.openWindow({
+						url: './xiaochejilu.html',//通过URL传参
+						
+					})
+			});
+			
+				document.getElementById('xiaoche_main').addEventListener('tap', function() {
+					mui.openWindow({
+						url: './main.html',//通过URL传参
+						
+					})
+			});
+		</script>
+		
+		<!--<script type="text/javascript">
+			mui('body').on('tap', 'a', function() {
+				document.location.href = this.href;
+			});
+		</script>-->
+		
+		<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+		<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+		<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+	</body>
+
+</html>

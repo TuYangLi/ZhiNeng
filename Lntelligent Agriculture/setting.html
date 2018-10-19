@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.lager{
+				height: 50px;
+         		background: royalblue;
+         	}
+         	.mui-title{
+         		font-family: "微软雅黑";
+         		font-size: 20px;
+         		color: #FFFFFF;
+         		
+         		}
+         		.setting_btn1{
+         			margin-top: 20px;
+         		}
+         		.head{
+         			float: left;
+         			width: 25%;
+         			
+         			
+         		}
+         		.center{
+         			float: left;
+         			width: 55%;
+         		}
+         		.tail{
+         			float: left;
+         			width: 20%;
+         		}
+		</style>
+	</head>
+
+	<body>
+		<!-- 主界面菜单同时移动 -->
+		    <!-- 侧滑导航根容器 -->
+		    <div class="mui-off-canvas-wrap mui-draggable">
+		        <!-- 主页面容器 -->
+		        <div class="mui-inner-wrap">
+		            <!-- 菜单容器 -->
+		            <aside class="mui-off-canvas-left" id="offCanvasSide">
+		                <div class="mui-scroll-wrapper">
+		                    <div class="mui-scroll">
+		                        <!-- 菜单具体展示内容 -->
+		                        
+		                    </div>
+		                </div>
+		            </aside>
+		            <!-- 主页面标题 -->
+		            <header class="mui-bar mui-bar-nav lager">
+		               
+		                <h1 class="mui-title">标题</h1>
+		            </header>
+		            <nav class="mui-bar mui-bar-tab">
+		    		    <a class="mui-tab-item mui-active" id="main">
+		    		        <span class="mui-icon mui-icon-home"></span>
+		    		        <span class="mui-tab-label">首页</span>
+		    		    </a>
+		    		      <a class="mui-tab-item" id="main_setting">
+		    		        <span class="mui-icon mui-icon-gear"></span>
+		    		        <span class="mui-tab-label">设置</span>
+		    		    </a>
+		    		    <a class="mui-tab-item" id="main_about">
+		    		        <span class="mui-icon mui-icon-help"></span>
+		    		        <span class="mui-tab-label">关于</span>
+		    		    </a>
+
+		    		  
+		    		</nav>
+		            <!-- 主页面内容容器 -->
+		            <div class="mui-content mui-scroll-wrapper">
+		                <div class="mui-scroll">
+		                    <!-- 主界面具体展示内容 -->
+		                     <div class="setting_btn1">						
+			<button type="button" class="mui-btn mui-btn-block">
+				<div class="head">
+					更新版本
+				</div>
+				<div class="center">
+					　　　　　　　
+
+				</div>
+				<div class="tail">
+					v1.23
+				</div>
+			</button>
+		  					</div>
+		                    <div class="setting_btn2">						
+			<button type="button" class="mui-btn mui-btn-block" id="setting_btn">退出登录</button>
+		  					</div>
+		                </div>
+		            </div>
+		       	 <div class="mui-off-canvas-backdrop"></div>
+		        </div>
+		    </div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			//点击关于跳转
+			document.getElementById('main_about').addEventListener('tap', function() {
+					mui.openWindow({
+						url: './about.html',//通过URL传参
+						
+					})
+			});
+			//点击设置跳转
+			document.getElementById('main_setting').addEventListener('tap', function() {
+					mui.openWindow({
+						url: './setting.html',//通过URL传参
+						
+					})
+			});
+			//点击首页
+			document.getElementById('main').addEventListener('tap', function() {
+					mui.openWindow({
+						url: './main.html',//通过URL传参
+						
+					})
+			});
+			
+			//退出登录
+			document.getElementById('setting_btn').addEventListener('tap', function() {
+					mui.openWindow({
+						url: './login.html',//通过URL传参
+						
+					})
+			});
+		</script>
+	</body>
+
+</html>

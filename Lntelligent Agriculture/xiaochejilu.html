@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.xiaoche_title{
+				background: cornflowerblue;
+			}
+			.xiaoche_icon{
+				color: #FFFFFF;
+			}
+			.mui-title{
+				font-family: "微软雅黑";
+				font-size: 20px;
+				color: white;
+			}
+			.all{
+				width: 100%;
+				float: left;
+			}
+			.select {
+				
+				width: 78%;
+				margin-left: 10px;
+				margin-top: 15px;
+			}
+			.jilu_btn{
+				background: darkgrey;
+				width: 60px;
+				height: 45px;
+				margin-top: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- 主界面菜单同时移动 -->
+		    <!-- 侧滑导航根容器 -->
+		    <div class="mui-off-canvas-wrap mui-draggable">
+		        <!-- 主页面容器 -->
+		        <div class="mui-inner-wrap">
+		            <!-- 菜单容器 -->
+		            <aside class="mui-off-canvas-left" id="offCanvasSide">
+		                <div class="mui-scroll-wrapper">
+		                    <div class="mui-scroll">
+		                        <!-- 菜单具体展示内容 -->
+		                        
+		                    </div>
+		                </div>
+		            </aside>
+		            <!-- 主页面标题 -->
+		            <header class="mui-bar mui-bar-nav xiaoche_title">
+		                <a class="mui-icon mui-action-menu mui-icon-back mui-pull-left xiaoche_icon" id="jilu_icon"></a>
+		                <h1 class="mui-title">小车记录</h1>
+		            </header>
+		            
+		            <!-- 主页面内容容器 -->
+		            <div class="mui-content mui-scroll-wrapper">
+		                <div class="mui-scroll all">
+		                    <!-- 主界面具体展示内容 -->
+		                   
+				    <select class="select" >
+
+					<option>一号小车</option>
+
+					<option>二号小车</option>
+
+					<option>三号小车</option>
+
+					<option>四号小车</option>
+
+				</select>
+				
+				<button type="button" class="mui-btn jilu_btn">
+					查询
+				</button>
+			
+		                </div>
+		            </div>
+		       	 <div class="mui-off-canvas-backdrop"></div>
+		        </div>
+		    </div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			
+				document.getElementById('jilu_icon').addEventListener('tap', function() {
+					mui.openWindow({
+						url: './xiaoche.html',//通过URL传参
+						
+					})
+			});
+		</script>
+	</body>
+
+</html>

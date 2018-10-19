@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style type="text/css">
+		.calc-header h1{
+			width: 100%;
+			background: white;
+			box-shadow: 1px 1px 1px #ffffff;
+			font-size: 2em;
+			height: 80px;
+			line-height: 80px;
+			vertical-align: middle;
+			padding-right: 10px;
+			margin: 0px;
+			text-align: right;
+		}
+		.calc-content ul{
+			list-style: none;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	.calc-content ul li{
+		float: left;
+		width: 25%;
+		border-bottom: 1px solid #ffffff;
+		border-right: 1px solid #ffffff;
+		font-size: 2em;
+		padding: 1em 0;
+		text-align: center;
+	}
+	.calc-content ul li:last-child{
+		border-right: 0px;
+		background: maroon;
+		color: #ffffff;
+	}
+	.calc-content ul li.content-zero{
+		width: 50%;
+	}
+	.calc-content ul li:hover{
+		background: gainsboro;
+	}
+	.calc-content ul li:last-child:hover{
+		background: firebrick;
+		}
+	</style>
+
+	<body>
+		<div class="mui">
+			<div class="calc-header">
+				<h1 id="screen">0</h1>
+			</div>
+			<div class="calc-content ">
+				<ul>
+					<li id="ac">AC</li>
+					<li id="jiajian">±</li>
+					<li id="percent">%</li>
+					<li id="chu">/</li>
+				</ul>
+				<ul>
+					<li class="num">7</li>
+					<li class="num">8</li>
+					<li class="num">9</li>
+					<li id="cheng">*</li>
+				</ul>
+				<ul>
+					<li class="num">4</li>
+					<li class="num">5</li>
+					<li class="num">6</li>
+					<li id="jian">-</li>
+				</ul>
+				<ul>
+					<li class="num">1</li>
+					<li class="num">2</li>
+					<li class="num">3</li>
+					<li id="jia">+</li>
+				</ul>
+				<ul>
+					<li class="content-zero num">0</li>
+					<li id="dian">.</li>
+					<li id="dengyu">=</li>
+					
+				</ul>
+				
+			</div>
+			
+		</div>
+		
+		
+		
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<script type="text/javascript">
+			var temp="";
+			var result="";
+			var isCalc=false;
+			$(".num").click(function(){
+				temp=temp + $(this).html();
+				$("#screen").html(temp);
+			});
+			$("#jia").click(function(){
+				temp=temp + $(this).html();
+				$("#screen").html(temp);
+			});
+			$("#jian").click(function(){
+				temp=temp + $(this).html();
+				$("#screen").html(temp);
+			});
+			$("#cheng").click(function(){
+				temp=temp + $(this).html();
+				$("#screen").html(temp);
+			});
+			$("#chu").click(function(){
+				temp=temp + $(this).html();
+				$("#screen").html(temp);
+			});
+			$("#dengyu").click(function(){
+				result =eval(temp);
+				$("#screen").html(result);
+				temp=result;
+			});
+			$("#ac").click(function() {
+				temp = "";
+				result = "";
+				$("#screen").html(0);
+			});
+		</script>
+	</body>
+
+</html>

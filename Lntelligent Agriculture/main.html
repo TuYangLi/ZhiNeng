@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+         <style type="text/css">
+         	.lager{
+         		background: #00BFFF;
+         	}
+         	.mui-title{
+         		font-family: "微软雅黑";
+         		font-size: 20px;
+         		color: #FFFFFF;
+         		
+         		}
+         .footer{
+         	width: 100%;
+         	height: 53%;
+         	background: url(images/bg.png);
+         	background-size: cover;
+         }
+        .mui-scroll{
+         	
+         	margin-top: 47%;
+         }
+        .mui-content{
+
+        	width: 100%;
+            
+        }
+        /*.nine{
+        	
+        	width: 100%;
+        	height: 210px;
+        	margin-top: 15px;
+        	background: #FFFFFF;
+        }
+        .icon{
+          margin-top: 25px;
+          width: 95px;
+        height: 78px;
+        }
+        .mui-icon{
+        	width: 36px;
+        }*/
+          .icon{
+          
+          width: 90px;
+          height: 120px;
+        }
+        .mui-icon{
+        	margin-top:20px;
+        	width: 36px;
+        }
+         </style>
+	</head>
+
+	<body>
+		<!-- 主界面菜单同时移动 -->
+		    <!-- 侧滑导航根容器 -->
+		    <div class="mui-off-canvas-wrap mui-draggable">
+		        <!-- 主页面容器 -->
+		        <div class="mui-inner-wrap">
+		            <!-- 菜单容器 -->
+		            <aside class="mui-off-canvas-left" id="offCanvasSide">
+		                <div class="mui-scroll-wrapper">
+		                    <div class="mui-scroll">
+		                        <!-- 菜单具体展示内容 -->
+		                        
+		                    </div>
+		                </div>
+		            </aside>
+		            <!-- 主页面标题 -->
+		            <header class="mui-bar mui-bar-nav lager">
+		                
+		                <h1 class="mui-title">智能交通</h1>
+		            </header>
+		            <nav class="mui-bar mui-bar-tab">
+		    		    <a class="mui-tab-item mui-active" id="main">
+		    		        <span class="mui-icon mui-icon-home"></span>
+		    		        <span class="mui-tab-label">首页</span>
+		    		    </a>
+		    		  
+
+		    		    <a class="mui-tab-item" id="main_setting">
+		    		        <span class="mui-icon mui-icon-gear"></span>
+		    		        <span class="mui-tab-label">设置</span>
+		    		    </a>
+		    		      <a class="mui-tab-item" id="main_about">
+		    		        <span class="mui-icon mui-icon-help"></span>
+		    		        <span class="mui-tab-label">关于</span>
+		    		    </a>
+		    		</nav>
+		            <!-- 主页面内容容器 -->
+		            <div class="mui-content mui-scroll-wrapper">
+		            	<div class="footer">
+		                <div class="mui-scroll">
+		                    <!-- 主界面具体展示内容 -->
+		               
+				<div class="mui-card-header">
+					<div class="col-lg-1">
+						道路状况：
+						</div>
+					<div class="col-lg-4">
+						　　3
+						</div>
+						<div class="col-lg-2 ">
+						　空闲车位：
+						</div>
+						<div class="col-lg-2 one">
+						2
+						</div>
+					</div>
+				
+					<div class="mui-card-header">
+					<div class="col-lg-2 one">
+						公交车数量：
+						</div>
+					<div class="col-lg-2 one">
+						　2
+						</div>
+						<div class="col-lg-2 one">
+					停车费率：
+						</div>
+						<div class="col-lg-2 one">
+						5
+						</div>
+					</div>
+				
+				<div class="mui-card-footer">
+					<div class="col-lg-2 one">
+						ETC当前费率：
+						</div>
+					<div class="col-lg-2 one">
+						　　5
+						</div>
+						<div class="col-lg-2 one">
+						　路灯状态：
+						</div>
+						<div class="col-lg-2 one">
+						Close
+						</div></div>
+				                		                
+		                </div>
+		                </div>
+		                <div class="mui-content">
+		                	<div class="nine">
+		                		 <ul class="mui-table-view mui-grid-view mui-grid-9">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3 icon"><a href="#">
+		                    <img class="mui-icon" src="images/setc.png"></img>
+		                    <div class="mui-media-body">ETC</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3 icon"><a href="#">
+		                    <img class="mui-icon" src="images/tingchechang.png"></img>
+		                    <div class="mui-media-body">停车场</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3 icon"><a href="xiaoche.html">
+		                    <img class="mui-icon" src="images/xiaoche.png"></img>
+		                    <div class="mui-media-body">小车</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3 icon"><a href="Bus.html">
+		                    <img class="mui-icon" src="images/bus.png"></img>
+		                    <div class="mui-media-body">公交</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3 icon"><a href="#">
+		                   <img class="mui-icon" src="images/huanjing.png"></img>
+		                    <div class="mui-media-body">环境</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3 icon"><a href="#">
+		                    <img class="mui-icon" src="images/hongludeng.png"></img>
+		                    <div class="mui-media-body">红绿灯</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3 icon"><a href="#">
+		                    <img class="mui-icon" src="images/ludeng.png"></img>
+		                    <div class="mui-media-body">路灯</div></a></li>
+		          
+		        </ul> 
+		                		
+		                		
+		                	</div>
+		                	
+		        </div>
+		</div>
+		            </div>
+		       	 
+		                
+		       	 </div>
+		   
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			//点击关于跳转
+			document.getElementById('main_about').addEventListener('tap', function() {
+					mui.openWindow({
+						url: './about.html',//通过URL传参
+						
+					})
+			});
+			//点击设置跳转
+			document.getElementById('main_setting').addEventListener('tap', function() {
+					mui.openWindow({
+						url: './setting.html',//通过URL传参
+						
+					})
+			});
+			//点击首页
+			document.getElementById('main').addEventListener('tap', function() {
+					mui.openWindow({
+						url: './main.html',//通过URL传参
+						
+					})
+			});
+		</script>
+	</body>
+
+</html>
